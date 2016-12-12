@@ -1,0 +1,22 @@
+remote:
+  host: "macross.kk-box.com"
+  user: "wusungpeng"
+  path: "~/workspace/metronic"
+behaviour:
+  uploadOnSave: true
+  syncDownOnOpen: true
+  forgetConsole: false
+  autoHideConsole: false
+  alwaysSyncAll: false
+option:
+  deleteFiles: true
+  exclude: [
+    ".sync-config.cson"
+    ".git"
+    "node_modules"
+    "tmp"
+    "vendor"
+    "laravel.log"
+    "bootstrap/cache/"
+    "storage/framework/"
+  ]
