@@ -17,13 +17,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
         <link href="/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.css" />
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL STYLES -->
-        <link href="/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
-        <link href="/css/plugins.min.css" rel="stylesheet" type="text/css" />
+        <link href="/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
         <!-- END THEME GLOBAL STYLES -->
         <!-- BEGIN THEME LAYOUT STYLES -->
         <link href="/css/layout.min.css" rel="stylesheet" type="text/css" />
@@ -505,7 +505,7 @@
                     <div class="page-head">
                         <!-- BEGIN PAGE TITLE -->
                         <div class="page-title">
-                            <h1>KKGroup Portal
+                            <h1>Portal
                                 <small></small>
                             </h1>
                         </div>
@@ -593,16 +593,10 @@
                         <!-- END PAGE TOOLBAR -->
                     </div>
                     <!-- END PAGE HEAD-->
-                    <!-- BEGIN PAGE BREADCRUMB -->
-                    <ul class="page-breadcrumb breadcrumb">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                    </ul>
-                    <!-- END PAGE BREADCRUMB -->
+
                     <!-- BEGIN PAGE BASE CONTENT -->
                     <div class="row" id="sortable_portlets">
-                        <div class="col-md-4 column sortable">
+                        <div class="col-md-3 column sortable">
                             <div class="portlet portlet-sortable light bordered">
                                 <div class="portlet-title">
                                     <div class="caption font-blue">
@@ -611,9 +605,6 @@
                                         <span class="caption-helper"></span>
                                     </div>
                                     <div class="actions">
-                                        <a href="javascript:;" class="btn btn-circle btn-default btn-sm">
-                                            <i class="fa fa-plus"></i> Add
-                                        </a>
                                         <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;"></a>
                                     </div>
                                 </div>
@@ -634,22 +625,22 @@
                                 </div>
                                 <div class="portlet-body">
                                     <div class="scroller" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
-                                      @foreach ($others as $other)
-                                        <ul class="about-links-item">
+                                      <ul class="about-links-item">
+                                        @foreach ($others as $other)
                                           <li>
                                             <a href="#" title="{{ $other['title'] }}">
                                               {{ $other['title'] }}
                                             </a>
                                           </li>
-                                        </ul>
-                                      @endforeach
+                                        @endforeach
+                                      </ul>
                                     </div>
                                 </div>
                             </div>
                             <!-- empty sortable porlet required for each columns! -->
                             <div class="portlet portlet-sortable-empty"> </div>
                         </div>
-                        <div class="col-md-4 column sortable">
+                        <div class="col-md-6 column sortable">
                             <div class="portlet portlet-sortable light bordered">
                                 <div class="portlet-title">
                                     <div class="caption font-red-sunglo">
@@ -658,20 +649,23 @@
                                         <span class="caption-helper"></span>
                                     </div>
                                     <div class="actions">
+                                        <a href="javascript:;" class="btn btn-circle btn-default btn-sm">
+                                            <i class="fa fa-plus"></i> Add
+                                        </a>
                                         <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;"></a>
                                     </div>
                                 </div>
                                 <div class="portlet-body">
                                     <div class="scroller" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
+                                      <ul class="about-links-item">
                                       @foreach ($announces as $announce)
-                                        <ul class="about-links-item">
                                           <li>
                                             <a href="#" title="{{ $announce->announce_title }}">
                                               {{ $announce->announce_title }}
                                             </a>
                                           </li>
-                                        </ul>
                                       @endforeach
+                                      </ul>
                                     </div>
                                 </div>
                             </div>
@@ -688,11 +682,12 @@
                                 </div>
                                 <div class="portlet-body">
                                     <div class="scroller" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
+
                                       <div class="table-responsive">
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th> 別 </th>
+                                                    <th> 類別 </th>
                                                     <th> 單號 </th>
                                                     <th> 申請人 </th>
                                                     <th> 開單日期 </th>
@@ -701,14 +696,14 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td> 出 </td>
+                                                    <td> 出差 </td>
                                                     <td> W115120011 </td>
                                                     <td> tingwu </td>
                                                     <td> 2016/12/01 </td>
                                                     <td> 2016/12/01 </td>
                                                 </tr>
                                                 <tr>
-                                                    <td> 請 </td>
+                                                    <td> 請款 </td>
                                                     <td> P115120011 </td>
                                                     <td> tingwu </td>
                                                     <td> 2016/12/01 </td>
@@ -745,7 +740,7 @@
                             <!-- empty sortable porlet required for each columns! -->
                             <div class="portlet portlet-sortable-empty"> </div>
                         </div>
-                        <div class="col-md-4 column sortable">
+                        <div class="col-md-3 column sortable">
                             <div class="portlet portlet-sortable light bordered">
                                 <div class="portlet-title">
                                     <div class="caption font-purple">
@@ -759,15 +754,17 @@
                                 </div>
                                 <div class="portlet-body">
                                     <div class="scroller" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
+                                      <ul class="about-links-item">
                                         @foreach ($sidebars as $sidebar)
-                                          <ul class="about-links-item">
+
                                             <li>
                                               <a href="#" title="{{ $sidebar['title'] }}">
                                                 {{ $sidebar['title'] }}
                                               </a>
                                             </li>
-                                          </ul>
+
                                         @endforeach
+                                      </ul>
                                     </div>
                                 </div>
                             </div>
@@ -816,26 +813,40 @@
                                             <a href="#portlet_tab1" data-toggle="tab"> KKBOX </a>
                                         </li>
                                         <li>
-                                            <a href="#portlet_tab2" data-toggle="tab"> KKTown </a>
+                                            <a href="#portlet_tab1" data-toggle="tab"> KKTown </a>
                                         </li>
                                         <li>
-                                            <a href="#portlet_tab3" data-toggle="tab"> KKTV </a>
+                                            <a href="#portlet_tab1" data-toggle="tab"> KKTV </a>
                                         </li>
                                         <li>
-                                            <a href="#portlet_tab3" data-toggle="tab"> KKSteam </a>
+                                            <a href="#portlet_tab1" data-toggle="tab"> KKSteam </a>
                                         </li>
                                         <li>
-                                            <a href="#portlet_tab3" data-toggle="tab"> KKTIX </a>
+                                            <a href="#portlet_tab1" data-toggle="tab"> KKTIX </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="portlet-body">
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="portlet_tab1">
-                                            <h4>Tab 1 Content</h4>
-                                            <p> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
-                                                zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.ut
-                                                laoreet dolore magna ut laoreet dolore magna. ut laoreet dolore magna. ut laoreet dolore magna. </p>
+                                            <ul class="about-links-item">
+                                              <li>
+                                                <a href="#" title="各據點聯絡方式">各據點聯絡方式
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#" title="座位平面圖">座位平面圖
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#" title="分機表">分機表
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#" title="VPN 使用方式">VPN 使用方式
+                                                </a>
+                                              </li>
+                                            </ul>
                                         </div>
                                         <div class="tab-pane" id="portlet_tab2">
                                             <h4>Tab 2 Content</h4>
@@ -1420,10 +1431,10 @@
         <div class="page-footer">
             <div class="page-footer-inner"> 2016 &copy;
                 <a target="_blank" href="http://keenthemes.com">KKBOX Group</a> &nbsp;|&nbsp;
-                <a href="" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">KKBOX Taiwan</a>&nbsp;|&nbsp;
-                <a href="" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">KKStream</a>&nbsp;|&nbsp;
-                <a href="" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">KKTV</a>&nbsp;|&nbsp;
-                <a href="" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">KKTOWN</a>&nbsp;|&nbsp;
+                <a href="http://metronic.wusungpeng.macross.kk-box.com/home" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">KKBOX Taiwan</a>&nbsp;|&nbsp;
+                <a href="http://beadmin.wusungpeng.macross.kk-box.com/home" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">KKStream</a>&nbsp;|&nbsp;
+                <a href="http://black.wusungpeng.macross.kk-box.com/home" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">KKTV</a>&nbsp;|&nbsp;
+                <a href="http://wintermin.wusungpeng.macross.kk-box.com/home" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">KKTOWN</a>&nbsp;|&nbsp;
                 <a href="" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">KKTIX</a>
             </div>
             <div class="scroll-to-top">
@@ -1484,7 +1495,7 @@
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.js"></script>
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="/js/app.min.js" type="text/javascript"></script>

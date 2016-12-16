@@ -19,17 +19,17 @@ var AppCalendar = function() {
                 r = {
                     right: "title",
                     center: "",
-                    left: "month"
+                    left: ""
                 }) : $("#calendar").parents(".portlet").width() <= 720 ? ($("#calendar").addClass("mobile"),
                 r = {
                     left: "title, prev, next",
                     center: "",
-                    left: "month"
+                    left: ""
                 }) : ($("#calendar").removeClass("mobile"),
                 r = {
                     left: "title",
                     center: "",
-                    left: "month"
+                    left: ""
                 });
                 var l = function(e) {
                     var t = {
