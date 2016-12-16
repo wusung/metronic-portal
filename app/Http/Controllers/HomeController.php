@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Announce;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,34 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $announces = Announce::where('state', 'A')
+            ->orderBy('apply_date', 'desc')
+            ->paginate(5);
+
+        // TODO: extract to portal_sidebars
+        $sidebars = [
+            ['title' => 'Web Mail', 'link' => '#' ],
+            ['title' => 'KKBOX Blog', 'link' => '#' ],
+            ['title' => 'Twiki', 'link' => '#' ],
+            ['title' => 'Galley', 'link' => '#' ],
+            ['title' => 'HR Portal', 'link' => '#' ],
+            ['title' => 'HR Portal (EN)', 'link' => '#' ],
+            ['title' => 'eflow', 'link' => '#' ],
+            ['title' => 'Trac', 'link' => '#' ],
+            ['title' => 'Slack', 'link' => '#' ],
+            ['title' => 'CRM', 'link' => '#' ]
+        ];
+
+        $others = [
+            ['title' => '外出申請', 'link' => '#' ],
+            ['title' => '名片申請', 'link' => '#' ],
+            ['title' => 'Time Card', 'link' => '#' ],
+        ];
+
+        return view('home', [
+            'announces' => $announces,
+            'sidebars' => $sidebars,
+            'others' => $others,
+        ]);
     }
 }

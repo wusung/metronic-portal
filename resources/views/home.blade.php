@@ -1,35 +1,21 @@
 <!DOCTYPE html>
-<!--
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.7
-Version: 4.7.1
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
 <html lang="en">
-    <!--<![endif]-->
+<!--<![endif]-->
     <!-- BEGIN HEAD -->
-
     <head>
         <meta charset="utf-8" />
-        <title>Metronic Admin Theme #4 | Draggable Portlets</title>
+        <title>KKBOX Portal</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="Preview page of Metronic Admin Theme #4 for draggable bootstrap portlet samples" name="description" />
+        <meta content="kkgroup portal" name="description" />
         <meta content="" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
-        <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link href="/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
         <link href="/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
@@ -40,8 +26,15 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- END THEME GLOBAL STYLES -->
         <!-- BEGIN THEME LAYOUT STYLES -->
         <link href="/css/layout.min.css" rel="stylesheet" type="text/css" />
-        <link href="/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
+        <link href="/css/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+        <style media="screen">
+          .about-links-item {
+            list-style-type: none;
+            padding: 0;
+          }
+        </style>
         <!-- END THEME LAYOUT STYLES -->
         <link rel="shortcut icon" href="favicon.ico" /> </head>
     <!-- END HEAD -->
@@ -54,7 +47,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- BEGIN LOGO -->
                 <div class="page-logo">
                     <a href="index.html">
-                        <img src="../assets/layouts/layout4/img/logo-light.png" alt="logo" class="logo-default" /> </a>
+                        <img src="/img/logo-light.png" alt="logo" class="logo-default" /> </a>
                     <div class="menu-toggler sidebar-toggler">
                         <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
                     </div>
@@ -417,7 +410,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                     <span class="username username-hide-on-mobile"> Nick </span>
                                     <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
-                                    <img alt="" class="img-circle" src="../assets/layouts/layout4/img/avatar9.jpg" /> </a>
+                                    <img alt="" class="img-circle" src="/img/avatar9.jpg" /> </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
                                     <li>
                                         <a href="page_user_profile_1.html">
@@ -484,201 +477,18 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
                     <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
                     <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-                    <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                    <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
                         <li class="nav-item start ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
+                            <a href="{{ url('home') }}" class="nav-link nav-toggle">
                                 <i class="icon-home"></i>
-                                <span class="title">Dashboard</span>
-                                <span class="arrow"></span>
+                                <span class="title">Home </span>
                             </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item start ">
-                                    <a href="index.html" class="nav-link ">
-                                        <i class="icon-bar-chart"></i>
-                                        <span class="title">Dashboard 1</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item start ">
-                                    <a href="dashboard_2.html" class="nav-link ">
-                                        <i class="icon-bulb"></i>
-                                        <span class="title">Dashboard 2</span>
-                                        <span class="badge badge-success">1</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item start ">
-                                    <a href="dashboard_3.html" class="nav-link ">
-                                        <i class="icon-graph"></i>
-                                        <span class="title">Dashboard 3</span>
-                                        <span class="badge badge-danger">5</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="heading">
-                            <h3 class="uppercase">Features</h3>
                         </li>
                         <li class="nav-item  ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-diamond"></i>
-                                <span class="title">UI Features</span>
-                                <span class="arrow"></span>
+                            <a href="#" class="nav-link ">
+                                <i class="icon-calendar"></i>
+                                <span class="title">會議室 </span>
                             </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item  ">
-                                    <a href="ui_colors.html" class="nav-link ">
-                                        <span class="title">Color Library</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_metronic_grid.html" class="nav-link ">
-                                        <span class="title">Metronic Grid System</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_general.html" class="nav-link ">
-                                        <span class="title">General Components</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_buttons.html" class="nav-link ">
-                                        <span class="title">Buttons</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_buttons_spinner.html" class="nav-link ">
-                                        <span class="title">Spinner Buttons</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_confirmations.html" class="nav-link ">
-                                        <span class="title">Popover Confirmations</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_sweetalert.html" class="nav-link ">
-                                        <span class="title">Bootstrap Sweet Alerts</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_icons.html" class="nav-link ">
-                                        <span class="title">Font Icons</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_socicons.html" class="nav-link ">
-                                        <span class="title">Social Icons</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_typography.html" class="nav-link ">
-                                        <span class="title">Typography</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_tabs_accordions_navs.html" class="nav-link ">
-                                        <span class="title">Tabs, Accordions & Navs</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_timeline.html" class="nav-link ">
-                                        <span class="title">Timeline 1</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_timeline_2.html" class="nav-link ">
-                                        <span class="title">Timeline 2</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_timeline_horizontal.html" class="nav-link ">
-                                        <span class="title">Horizontal Timeline</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_tree.html" class="nav-link ">
-                                        <span class="title">Tree View</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="javascript:;" class="nav-link nav-toggle">
-                                        <span class="title">Page Progress Bar</span>
-                                        <span class="arrow"></span>
-                                    </a>
-                                    <ul class="sub-menu">
-                                        <li class="nav-item ">
-                                            <a href="ui_page_progress_style_1.html" class="nav-link "> Flash </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="ui_page_progress_style_2.html" class="nav-link "> Big Counter </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_blockui.html" class="nav-link ">
-                                        <span class="title">Block UI</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_bootstrap_growl.html" class="nav-link ">
-                                        <span class="title">Bootstrap Growl Notifications</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_notific8.html" class="nav-link ">
-                                        <span class="title">Notific8 Notifications</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_toastr.html" class="nav-link ">
-                                        <span class="title">Toastr Notifications</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_bootbox.html" class="nav-link ">
-                                        <span class="title">Bootbox Dialogs</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_alerts_api.html" class="nav-link ">
-                                        <span class="title">Metronic Alerts API</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_session_timeout.html" class="nav-link ">
-                                        <span class="title">Session Timeout</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_idle_timeout.html" class="nav-link ">
-                                        <span class="title">User Idle Timeout</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_modals.html" class="nav-link ">
-                                        <span class="title">Modals</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_extended_modals.html" class="nav-link ">
-                                        <span class="title">Extended Modals</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_tiles.html" class="nav-link ">
-                                        <span class="title">Tiles</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_datepaginator.html" class="nav-link ">
-                                        <span class="title">Date Paginator</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="ui_nestable.html" class="nav-link ">
-                                        <span class="title">Nestable List</span>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item  ">
                             <a href="javascript:;" class="nav-link nav-toggle">
@@ -1555,7 +1365,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!-- BEGIN PAGE TITLE -->
                         <div class="page-title">
                             <h1>Draggable Portlets
-                                <small>draggable bootstrap portlet samples</small>
+                                <small></small>
                             </h1>
                         </div>
                         <!-- END PAGE TITLE -->
@@ -1654,23 +1464,19 @@ License: You must have a valid license purchased only from themeforest(the above
                     </ul>
                     <!-- END PAGE BREADCRUMB -->
                     <!-- BEGIN PAGE BASE CONTENT -->
-                    <div class="note note-info">
-                        <p> The draggable portlets powered with jQueryUI Sortable Plugin. You can use the jQueryUI Sortable API to store the portlet positions in your backend.
-                            <br> For more info check out
-                            <a href="http://jqueryui.com/sortable/#portlets" target="_blank"> jQueryUI Sortable Plugin's home</a>. </p>
-                    </div>
                     <div class="row" id="sortable_portlets">
                         <div class="col-md-4 column sortable">
                             <div class="portlet portlet-sortable light bordered">
                                 <div class="portlet-title">
-                                    <div class="caption font-green-sharp">
-                                        <i class="icon-speech font-green-sharp"></i>
-                                        <span class="caption-subject bold uppercase"> Portlet</span>
-                                        <span class="caption-helper">details...</span>
+                                    <div class="caption font-blue">
+                                        <i class="icon-calendar font-blue"></i>
+                                        <span class="caption-subject bold uppercase"> 行事曆</span>
+                                        <span class="caption-helper"></span>
                                     </div>
                                     <div class="actions">
                                         <a href="javascript:;" class="btn btn-circle btn-default btn-sm">
-                                            <i class="fa fa-plus"></i> Add </a>
+                                            <i class="fa fa-plus"></i> Add
+                                        </a>
                                         <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;"></a>
                                     </div>
                                 </div>
@@ -1687,27 +1493,33 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
                                 </div>
                             </div>
-                            <div class="portlet portlet-sortable light bg-inverse">
+
+                            <div class="portlet portlet-sortable light bordered">
                                 <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-paper-plane font-green-haze"></i>
-                                        <span class="caption-subject bold font-green-haze uppercase"> Input </span>
+                                    <div class="caption font-green-sharp">
+                                        <i class="icon-speech font-green-sharp"></i>
+                                        <span class="caption-subject bold uppercase"> 其他申請</span>
                                         <span class="caption-helper"></span>
                                     </div>
                                     <div class="actions">
-                                        <div class="portlet-input input-inline input-small">
-                                            <div class="input-icon right">
-                                                <i class="icon-magnifier"></i>
-                                                <input type="text" class="form-control input-circle" placeholder="search..."> </div>
-                                        </div>
+                                        <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;"></a>
                                     </div>
                                 </div>
                                 <div class="portlet-body">
-                                    <h4>Heading text goes here...</h4>
-                                    <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-                                        lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis. </p>
+                                    <div class="scroller" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
+                                      @foreach ($others as $other)
+                                        <ul class="about-links-item">
+                                          <li>
+                                            <a href="#" title="{{ $other['title'] }}">
+                                              {{ $other['title'] }}
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      @endforeach
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="portlet portlet-sortable box green-haze">
                                 <div class="portlet-title">
                                     <div class="caption">
@@ -1733,21 +1545,41 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="portlet portlet-sortable light bg-inverse">
                                 <div class="portlet-title">
                                     <div class="caption font-red-sunglo">
-                                        <i class="icon-share font-red-sunglo"></i>
-                                        <span class="caption-subject bold uppercase"> Portlet</span>
+                                        <i class="icon-event font-red-sunglo"></i>
+                                        <span class="caption-subject bold uppercase"> 公告</span>
                                         <span class="caption-helper"></span>
                                     </div>
                                     <div class="actions">
-                                        <div class="btn-group btn-group-devided" data-toggle="buttons">
-                                            <label class="btn btn-circle btn-transparent grey-salsa btn-sm active">
-                                                <input type="radio" name="options" class="toggle" id="option2">Week</label>
-                                            <label class="btn btn-circle btn-transparent grey-salsa btn-sm">
-                                                <input type="radio" name="options" class="toggle" id="option2">Month</label>
-                                        </div>
+                                        <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;"></a>
                                     </div>
                                 </div>
                                 <div class="portlet-body">
                                     <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1" data-rail-color="red" data-handle-color="green">
+                                        @foreach ($announces as $announce)
+                                          <ul class="about-links-item">
+                                            <li>
+                                              <a href="#" title="{{ $announce->announce_title }}">
+                                                {{ $announce->announce_title }}
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet portlet-sortable light bordered">
+                                <div class="portlet-title">
+                                    <div class="caption font-blue">
+                                        <i class="icon-calendar font-blue"></i>
+                                        <span class="caption-subject bold uppercase"> 待簽核事項</span>
+                                        <span class="caption-helper"></span>
+                                    </div>
+                                    <div class="actions">
+                                        <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;"></a>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="scroller" style="height:200px" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
                                         <h4>Heading Text</h4>
                                         <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
                                             eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus
@@ -1759,15 +1591,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
                                 </div>
                             </div>
+
                             <div class="portlet portlet-sortable box red-sunglo">
                                 <div class="portlet-title">
                                     <div class="caption">
-                                        <i class="fa fa-gift"></i>Portlet </div>
+                                        <i class="fa fa-tasks"></i>待簽核事項 </div>
                                     <div class="actions">
-                                        <a href="javascript:;" class="btn btn-default btn-sm">
-                                            <i class="fa fa-pencil"></i> Edit </a>
-                                        <a href="javascript:;" class="btn btn-default btn-sm">
-                                            <i class="fa fa-plus"></i> Add </a>
                                         <a class="btn btn-sm btn-icon-only btn-default fullscreen" href="javascript:;"></a>
                                     </div>
                                 </div>
@@ -1805,17 +1634,85 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="col-md-4 column sortable">
                             <div class="portlet portlet-sortable light bordered">
+                                <div class="portlet-title">
+                                    <div class="caption font-purple">
+                                        <i class="icon-share font-purple"></i>
+                                        <span class="caption-subject bold uppercase"> 常用功能</span>
+                                        <span class="caption-helper"></span>
+                                    </div>
+                                    <div class="actions">
+                                        <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;"></a>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="scroller" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
+                                        @foreach ($sidebars as $sidebar)
+                                          <ul class="about-links-item">
+                                            <li>
+                                              <a href="#" title="{{ $sidebar['title'] }}">
+                                                {{ $sidebar['title'] }}
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet portlet-sortable light bordered">
+                                <div class="portlet-title">
+                                    <div class="caption font-red-pink">
+                                        <i class="icon-share font-red-pink"></i>
+                                        <span class="caption-subject bold uppercase"> 辦公室資訊</span>
+                                        <span class="caption-helper"></span>
+                                    </div>
+                                    <div class="actions">
+                                        <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;"></a>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="scroller" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
+                                        <ul class="about-links-item">
+                                          <li>
+                                            <a href="#" title="各據點聯絡方式">各據點聯絡方式
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a href="#" title="座位平面圖">座位平面圖
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a href="#" title="分機表">分機表
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a href="#" title="VPN 使用方式">VPN 使用方式
+                                            </a>
+                                          </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet portlet-sortable light bordered">
                                 <div class="portlet-title tabbable-line">
                                     <div class="caption">
                                         <i class="icon-pin font-yellow-lemon"></i>
                                         <span class="caption-subject bold font-yellow-lemon uppercase"> Tabs </span>
                                     </div>
                                     <ul class="nav nav-tabs">
-                                        <li>
-                                            <a href="#portlet_tab2" data-toggle="tab"> Tab 2 </a>
-                                        </li>
                                         <li class="active">
-                                            <a href="#portlet_tab1" data-toggle="tab"> Tab 1 </a>
+                                            <a href="#portlet_tab1" data-toggle="tab"> KKBOX </a>
+                                        </li>
+                                        <li>
+                                            <a href="#portlet_tab2" data-toggle="tab"> KKTown </a>
+                                        </li>
+                                        <li>
+                                            <a href="#portlet_tab3" data-toggle="tab"> KKTV </a>
+                                        </li>
+                                        <li>
+                                            <a href="#portlet_tab3" data-toggle="tab"> KKSteam </a>
+                                        </li>
+                                        <li>
+                                            <a href="#portlet_tab3" data-toggle="tab"> KKTIX </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1836,66 +1733,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
                                 </div>
                             </div>
-                            <div class="portlet portlet-sortable box blue-hoki">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="fa fa-gift"></i>Portlet </div>
-                                    <div class="actions">
-                                        <a href="javascript:;" class="btn btn-default btn-sm">
-                                            <i class="fa fa-pencil"></i> Edit </a>
-                                        <div class="btn-group">
-                                            <a class="btn btn-sm btn-default" href="javascript:;" data-toggle="dropdown">
-                                                <i class="fa fa-user"></i> User
-                                                <i class="fa fa-angle-down"></i>
-                                            </a>
-                                            <ul class="dropdown-menu pull-right">
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-pencil"></i> Edit </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-trash-o"></i> Delete </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-ban"></i> Ban </a>
-                                                </li>
-                                                <li class="divider"> </li>
-                                                <li>
-                                                    <a href="javascript:;"> Make admin </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <a class="btn btn-sm btn-icon-only btn-default fullscreen" href="javascript:;"></a>
-                                    </div>
-                                </div>
-                                <div class="portlet-body"> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis. eget lacinia odio sem nec elit. Cras mattis consectetur purus
-                                    sit amet fermentum. Duis mollis. </div>
-                            </div>
-                            <div class="portlet portlet-sortable light bg-inverse">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-puzzle font-red-flamingo"></i>
-                                        <span class="caption-subject bold font-red-flamingo uppercase"> Tools </span>
-                                        <span class="caption-helper">actions...</span>
-                                    </div>
-                                    <div class="tools">
-                                        <a href="" class="collapse"> </a>
-                                        <a href="#portlet-config" data-toggle="modal" class="config"> </a>
-                                        <a href="" class="reload"> </a>
-                                        <a href="" class="fullscreen"> </a>
-                                        <a href="" class="remove"> </a>
-                                    </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <h4>Heading text goes here...</h4>
-                                    <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-                                        lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur. </p>
-                                </div>
-                            </div>
-                            <!-- empty sortable porlet required for each columns! -->
-                            <div class="portlet portlet-sortable-empty"> </div>
                         </div>
                     </div>
                     <!-- END PAGE BASE CONTENT -->
@@ -2021,7 +1858,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="media-status">
                                             <span class="badge badge-success">7</span>
                                         </div>
-                                        <img class="media-object" src="../assets/layouts/layout/img/avatar9.jpg" alt="...">
+                                        <img class="media-object" src="/img/avatar9.jpg" alt="...">
                                         <div class="media-body">
                                             <h4 class="media-heading">Deon Portalatin</h4>
                                             <div class="media-heading-sub"> CFO, H&D LTD </div>
@@ -2518,27 +2355,27 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="../assets/global/plugins/ie8.fix.min.js"></script>
 <![endif]-->
         <!-- BEGIN CORE PLUGINS -->
-        <script src="../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-        <script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="../assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
-        <script src="../assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-        <script src="../assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
-        <script src="../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="/js/js.cookie.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="/js/bootstrap-switch.min.js" type="text/javascript"></script>
         <!-- END CORE PLUGINS -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <script src="../assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
-        <script src="../assets/global/scripts/app.min.js" type="text/javascript"></script>
+        <script src="/js/app.min.js" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
-        <script src="../assets/pages/scripts/portlet-draggable.min.js" type="text/javascript"></script>
+        <script src="/js/portlet-draggable.min.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
-        <script src="../assets/layouts/layout4/scripts/layout.min.js" type="text/javascript"></script>
-        <script src="../assets/layouts/layout4/scripts/demo.min.js" type="text/javascript"></script>
-        <script src="../assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
-        <script src="../assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
+        <script src="/js/layout.min.js" type="text/javascript"></script>
+        <script src="/js/demo.min.js" type="text/javascript"></script>
+        <script src="/js/quick-sidebar.min.js" type="text/javascript"></script>
+        <script src="/js/quick-nav.min.js" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
 </body>
 </html>

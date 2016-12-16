@@ -1,9 +1,14 @@
 
 // Fonts
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all);
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all);
 
 // Variables
 @import "variables";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.about-links-item {
+    list-style-type: none;
+    padding: 0;
+}
