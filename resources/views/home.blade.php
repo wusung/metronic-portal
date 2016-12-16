@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
         <link href="/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css" />
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <!-- END PAGE LEVEL PLUGINS -->
@@ -1364,7 +1365,7 @@
                     <div class="page-head">
                         <!-- BEGIN PAGE TITLE -->
                         <div class="page-title">
-                            <h1>Draggable Portlets
+                            <h1>KKGroup Portal
                                 <small></small>
                             </h1>
                         </div>
@@ -1456,10 +1457,6 @@
                     <ul class="page-breadcrumb breadcrumb">
                         <li>
                             <a href="index.html">Home</a>
-                            <i class="fa fa-circle"></i>
-                        </li>
-                        <li>
-                            <span class="active">Portlets</span>
                         </li>
                     </ul>
                     <!-- END PAGE BREADCRUMB -->
@@ -1481,19 +1478,9 @@
                                     </div>
                                 </div>
                                 <div class="portlet-body">
-                                    <div class="scroller" style="height:200px" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
-                                        <h4>Heading Text</h4>
-                                        <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
-                                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus
-                                            sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. consectetur purus sit amet fermentum. Duis
-                                            mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. </p>
-                                        <p> nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-                                            mattis consectetur purus sit amet fermentum. consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus
-                                            sit amet fermentum. </p>
-                                    </div>
+                                    <div id="calendar" class="has-toolbar"> </div>
                                 </div>
                             </div>
-
                             <div class="portlet portlet-sortable light bordered">
                                 <div class="portlet-title">
                                     <div class="caption font-green-sharp">
@@ -1519,30 +1506,11 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="portlet portlet-sortable box green-haze">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="fa fa-gift"></i>Portlet </div>
-                                    <div class="actions">
-                                        <a href="javascript:;" class="btn btn-default btn-sm">
-                                            <i class="fa fa-pencil"></i> Edit </a>
-                                        <a href="javascript:;" class="btn btn-default btn-sm">
-                                            <i class="fa fa-plus"></i> Add </a>
-                                        <a class="btn btn-sm btn-icon-only btn-default fullscreen" href="javascript:;"></a>
-                                    </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <h4>Heading Text</h4>
-                                    <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-                                        lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur </p>
-                                </div>
-                            </div>
                             <!-- empty sortable porlet required for each columns! -->
                             <div class="portlet portlet-sortable-empty"> </div>
                         </div>
                         <div class="col-md-4 column sortable">
-                            <div class="portlet portlet-sortable light bg-inverse">
+                            <div class="portlet portlet-sortable light bordered">
                                 <div class="portlet-title">
                                     <div class="caption font-red-sunglo">
                                         <i class="icon-event font-red-sunglo"></i>
@@ -1554,23 +1522,23 @@
                                     </div>
                                 </div>
                                 <div class="portlet-body">
-                                    <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1" data-rail-color="red" data-handle-color="green">
-                                        @foreach ($announces as $announce)
-                                          <ul class="about-links-item">
-                                            <li>
-                                              <a href="#" title="{{ $announce->announce_title }}">
-                                                {{ $announce->announce_title }}
-                                              </a>
-                                            </li>
-                                          </ul>
-                                        @endforeach
+                                    <div class="scroller" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
+                                      @foreach ($announces as $announce)
+                                        <ul class="about-links-item">
+                                          <li>
+                                            <a href="#" title="{{ $announce->announce_title }}">
+                                              {{ $announce->announce_title }}
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      @endforeach
                                     </div>
                                 </div>
                             </div>
                             <div class="portlet portlet-sortable light bordered">
                                 <div class="portlet-title">
                                     <div class="caption font-blue">
-                                        <i class="icon-calendar font-blue"></i>
+                                        <i class="fa fa-tasks font-blue"></i>
                                         <span class="caption-subject bold uppercase"> 待簽核事項</span>
                                         <span class="caption-helper"></span>
                                     </div>
@@ -1579,55 +1547,60 @@
                                     </div>
                                 </div>
                                 <div class="portlet-body">
-                                    <div class="scroller" style="height:200px" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
-                                        <h4>Heading Text</h4>
-                                        <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
-                                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus
-                                            sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. consectetur purus sit amet fermentum. Duis
-                                            mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. </p>
-                                        <p> nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-                                            mattis consectetur purus sit amet fermentum. consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus
-                                            sit amet fermentum. </p>
+                                    <div class="scroller" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
+                                      <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th> 別 </th>
+                                                    <th> 單號 </th>
+                                                    <th> 申請人 </th>
+                                                    <th> 開單日期 </th>
+                                                    <th> 待實核日期 </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td> 出 </td>
+                                                    <td> W115120011 </td>
+                                                    <td> tingwu </td>
+                                                    <td> 2016/12/01 </td>
+                                                    <td> 2016/12/01 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td> 請 </td>
+                                                    <td> P115120011 </td>
+                                                    <td> tingwu </td>
+                                                    <td> 2016/12/01 </td>
+                                                    <td> 2016/12/01 </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="portlet portlet-sortable box red-sunglo">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="fa fa-tasks"></i>待簽核事項 </div>
-                                    <div class="actions">
-                                        <a class="btn btn-sm btn-icon-only btn-default fullscreen" href="javascript:;"></a>
                                     </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis. </p>
-                                    <p> Nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus. </p>
                                 </div>
                             </div>
                             <div class="portlet portlet-sortable light bordered">
                                 <div class="portlet-title">
                                     <div class="caption font-yellow-crusta">
                                         <i class="icon-share font-yellow-crusta"></i>
-                                        <span class="caption-subject bold uppercase"> Portlet</span>
-                                        <span class="caption-helper">stats...</span>
+                                        <span class="caption-subject bold uppercase"> 其他活動</span>
+                                        <span class="caption-helper"></span>
                                     </div>
                                     <div class="actions">
-                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                            <i class="icon-cloud-upload"></i>
-                                        </a>
-                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                            <i class="icon-wrench"></i>
-                                        </a>
-                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                            <i class="icon-trash"></i>
-                                        </a>
                                         <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;"></a>
                                     </div>
                                 </div>
-                                <div class="portlet-body"> Nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis
-                                    consectetur purus sit amet fermentum. consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
-                                    </div>
+                                <div class="portlet-body">
+                                  <ul class="about-links-item">
+                                    <li>
+                                      <a href="#">2016 KKBOX 集團保齡球現場</a>
+                                    </li>
+                                    <li>
+                                      <a href="#">隱形眼鏡團購</a>
+                                    </li>
+                                  </ul>
+                                </div>
                             </div>
                             <!-- empty sortable porlet required for each columns! -->
                             <div class="portlet portlet-sortable-empty"> </div>
@@ -1696,7 +1669,7 @@
                                 <div class="portlet-title tabbable-line">
                                     <div class="caption">
                                         <i class="icon-pin font-yellow-lemon"></i>
-                                        <span class="caption-subject bold font-yellow-lemon uppercase"> Tabs </span>
+                                        <span class="caption-subject bold font-yellow-lemon uppercase"> 其他公司 </span>
                                     </div>
                                     <ul class="nav nav-tabs">
                                         <li class="active">
@@ -2305,16 +2278,20 @@
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
         <div class="page-footer">
-            <div class="page-footer-inner"> 2016 &copy; Metronic Theme By
-                <a target="_blank" href="http://keenthemes.com">Keenthemes</a> &nbsp;|&nbsp;
-                <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+            <div class="page-footer-inner"> 2016 &copy;
+                <a target="_blank" href="http://keenthemes.com">KKBOX Group</a> &nbsp;|&nbsp;
+                <a href="" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">KKBOX Taiwan</a>&nbsp;|&nbsp;
+                <a href="" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">KKStream</a>&nbsp;|&nbsp;
+                <a href="" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">KKTV</a>&nbsp;|&nbsp;
+                <a href="" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">KKTOWN</a>&nbsp;|&nbsp;
+                <a href="" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">KKTIX</a>
             </div>
             <div class="scroll-to-top">
                 <i class="icon-arrow-up"></i>
             </div>
         </div>
         <!-- END FOOTER -->
-        <!-- BEGIN QUICK NAV -->
+        <!-- BEGIN QUICK NAV
         <nav class="quick-nav">
             <a class="quick-nav-trigger" href="#0">
                 <span aria-hidden="true"></span>
@@ -2347,14 +2324,16 @@
             </ul>
             <span aria-hidden="true" class="quick-nav-bg"></span>
         </nav>
+-->
         <div class="quick-nav-overlay"></div>
         <!-- END QUICK NAV -->
         <!--[if lt IE 9]>
-<script src="../assets/global/plugins/respond.min.js"></script>
-<script src="../assets/global/plugins/excanvas.min.js"></script>
-<script src="../assets/global/plugins/ie8.fix.min.js"></script>
-<![endif]-->
+        <script src="../assets/global/plugins/respond.min.js"></script>
+        <script src="../assets/global/plugins/excanvas.min.js"></script>
+        <script src="../assets/global/plugins/ie8.fix.min.js"></script>
+        <![endif]-->
         <!-- BEGIN CORE PLUGINS -->
+        <script src="/js/app.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="/js/js.cookie.min.js" type="text/javascript"></script>
@@ -2364,6 +2343,8 @@
         <!-- END CORE PLUGINS -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js"></script>
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="/js/app.min.js" type="text/javascript"></script>
@@ -2372,10 +2353,13 @@
         <script src="/js/portlet-draggable.min.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
+        <script src="/js/calendar.js" type="text/javascript"></script>
         <script src="/js/layout.min.js" type="text/javascript"></script>
         <script src="/js/demo.min.js" type="text/javascript"></script>
         <script src="/js/quick-sidebar.min.js" type="text/javascript"></script>
         <script src="/js/quick-nav.min.js" type="text/javascript"></script>
+
+
         <!-- END THEME LAYOUT SCRIPTS -->
 </body>
 </html>
